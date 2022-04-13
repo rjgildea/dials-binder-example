@@ -10,7 +10,7 @@ RUN adduser \
     -c "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
-RUN passwd -f -u ${NB_USER}}
+RUN passwd -f -u ${NB_USER}
 
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
