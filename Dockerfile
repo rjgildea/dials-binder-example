@@ -7,7 +7,7 @@ ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
 
 RUN adduser \
-    --gecos "Default user" \
+    -c "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
 RUN passwd -f -u ${NB_USER}}
