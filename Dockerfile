@@ -1,8 +1,12 @@
 FROM dials/dials:3.9.1
 
+# install the notebook package
+RUN source /dials/dials \
+    && conda install notebook jupyterlab -y
+
 # create user with a home directory
-ARG NB_USER
-ARG NB_UID
+ARG NB_USER=jovyan
+ARG NB_UID=1000
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
